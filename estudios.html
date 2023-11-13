@@ -4,7 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <script src="scripts.js"></script>
     <title>cvLucas</title>
+
+    <script>
+        // Obtener los valores de los colores almacenados del almacenamiento local
+        var colorPrimario = localStorage.getItem("colorPrimario");
+        var colorMedio = localStorage.getItem("colorMedio");
+        var colorClaro = localStorage.getItem("colorClaro");
+        var colorTextoHover = localStorage.getItem("colorTextoHover");
+    
+        // Establecer los valores de los colores en el CSS
+        var root = document.documentElement;
+        root.style.setProperty("--color-primario", colorPrimario);
+        root.style.setProperty("--color-medio", colorMedio);
+        root.style.setProperty("--color-claro", colorClaro);
+        root.style.setProperty("--color-textohover", colorTextoHover);
+    </script>
+
 </head>
 
 <body>
@@ -44,6 +61,7 @@
     <!--Pie de página-->
     <footer>
         <p>©Derechos de autor</p>
+        <button onclick="changeColor(true)">Cambiar color</button>
     </footer>
 </body>
 </html>

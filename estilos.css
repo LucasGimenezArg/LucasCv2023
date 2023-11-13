@@ -1,3 +1,12 @@
+:root {
+    --color-primario: #D86816;
+    --color-medio: #F0A242;
+    --color-claro: #F9C067;
+    --color-texto: #FFFFFF;
+    --color-textohover: #ad500d;
+}
+  
+
 body{
     font-family: Arial, sans-serif;
 }
@@ -11,15 +20,15 @@ h1{
 /*@media para celulares*/
 
 nav{
-    background-color: #D86816;
+    background-color: var(--color-primario);
     display: flex;
-    padding: 10px 20px;
     align-items: flex-end;
     justify-content: center;
 }
 
 nav ul li{
     display: inline-block;
+    margin-right: 10px;
 }
 
 nav ul li a{
@@ -31,7 +40,7 @@ nav ul li a{
 }
 
 ul li a:hover{
-    background-color: #ad500d;
+    background-color: var(--color-textohover);
 }
 
 /*Pagina principal abajo, barra navegación arriba*/
@@ -47,13 +56,13 @@ h3{
 
 .cajaCompleta{
     justify-content: center;
-    background-color: #F9C067;
+    background-color: var(--color-claro);
     display:flex;
     align-items: center;
 }
 
 .cajaTexto{
-    background-color: #F0A242;
+    background-color: var(--color-medio);
     /*probar abajo*/
     width: 20%;
     height: 260px;
@@ -62,7 +71,7 @@ h3{
     padding-right: 150px;
     padding-bottom: 80px;
     box-sizing: content-box;
-    color:white;
+    color: var(--color-texto);
 }
 
 img{
@@ -75,10 +84,13 @@ img{
 
 /*footer abajo, pagina principal arriba*/
 footer{
-    background-color: #D86816;
+    background-color: var(--color-primario);
     font-family: Arial, sans-serif;
-    color: white;
+    color: var(--color-texto);
     padding:3%;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*---------Celulares-----------------*/
@@ -117,7 +129,8 @@ label{/*no muestra la etiqueta ☰ */
     label{                      /* dibuja la etiqueta ☰  con formato botón */
         box-sizing: border-box;
         display: block;
-        border: 1px solid black;
+        border: 1px solid white;
+        color: white;
         border-radius: 5px;
         width: 30px;
         height: 30px;
@@ -125,10 +138,13 @@ label{/*no muestra la etiqueta ☰ */
         font-weight: bold;
         text-align: center;
         user-select: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
         }
     ul{                          /*deja de mostrar el bloque contenedor de los botones horizontales */
         display: none;
-        background-color: #D86816;  
+        background-color: var(--color-primario);  
     }
 
 }
